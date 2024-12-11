@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -26,9 +30,9 @@ jobs:
         run: npm install
 
       # Step 4: Build the project
-   #   - name: Build the project
+      - name: Build the project
      #   run: npm run build
 
       # Step 5: Run unit tests
-      #- name: Run tests
+      - name: Run tests
       #  run: npm test
