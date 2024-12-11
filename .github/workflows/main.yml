@@ -5,25 +5,30 @@ on:
     branches:
       - main
   workflow_dispatch: # Allows manual triggering
-  
+
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest # Select the operating system
+    runs-on: ubuntu-latest # Operating system for the runner
 
     steps:
+      # Step 1: Clone the repository
       - name: Checkout code
-        uses: actions/checkout@v4 # Clone the project.
-        
+        uses: actions/checkout@v3
+
+      # Step 2: Install Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify the version of Node.js
-          
-      - name: Install dependencies
-        run: 'npm install' #  Install dependencies
-        
-      - name: Build the app # Create a project build.
-        #run: 'npm run build'
+          node-version: '16' # Specify Node.js version to install
 
-      - name: Run tests # Run unit tests.
-        #run: 'npm test'
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project
+   #   - name: Build the project
+     #   run: npm run build
+
+      # Step 5: Run unit tests
+      #- name: Run tests
+      #  run: npm test
