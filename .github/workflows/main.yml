@@ -15,24 +15,13 @@ jobs:
     runs-on: ubuntu-latest # Operating system for the runner
 
     steps:
-      # Step 1: Clone the repository
       - name: Checkout code
         uses: actions/checkout@v3
-
-      # Step 2: Install Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify Node.js version to install
-
-      # Step 3: Install dependencies
+          node-version: '16' 
       - name: Install dependencies
         run: npm install
-
-      # Step 4: Build the project
-     # - name: Build the project
-     #   run: npm run build
-
-      # Step 5: Run unit tests
-    #  - name: Run tests
-     #   run: npm test
+      - name: Build the project
+      - name: Run tests
