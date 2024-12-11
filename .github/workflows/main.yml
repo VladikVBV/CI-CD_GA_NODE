@@ -1,0 +1,38 @@
+name: Continuous Integration
+
+on:
+  push: # trigger on the push event
+    branches:
+      - main 
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Select the operating system
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the version of Node.js
+          
+      - name: show Java version
+        run: "java -version"
+        
+      - name: Checkout code
+        uses: actions/checkout@v4 # Clone the project.
+          
+      - name: Show directory
+        run: 'pwd'
+        
+      - name: List files
+        run: 'ls -al'
+          
+      - name: Install dependencies
+        run: npm install #  Install dependencies
+        
+      - name: Build the app # Create a project build.
+        #run: 'npm run build'
+
+      - name: Run tests # Run unit tests.
+        #run: 'npm test'
