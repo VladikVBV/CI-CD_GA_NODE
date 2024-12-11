@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest # Select the operating system
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Clone the project.
+        
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -18,9 +21,6 @@ jobs:
           
       - name: show Java version
         run: "java -version"
-        
-      - name: Checkout code
-        uses: actions/checkout@v4 # Clone the project.
           
       - name: Show directory
         run: 'pwd'
