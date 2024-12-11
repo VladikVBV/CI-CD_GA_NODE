@@ -1,11 +1,11 @@
 name: Continuous Integration
 
 on:
-  push: # trigger on the push event
+  push:
     branches:
-      - main 
+      - main
   workflow_dispatch: # Allows manual triggering
-
+  
 jobs:
   build-and-test:
     runs-on: ubuntu-latest # Select the operating system
@@ -20,7 +20,7 @@ jobs:
           node-version: '16' # Specify the version of Node.js
           
       - name: show Java version
-        run: "java -version"
+        run: "node -version"
           
       - name: Show directory
         run: 'pwd'
