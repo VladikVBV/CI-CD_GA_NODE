@@ -19,20 +19,11 @@ jobs:
         with:
           node-version: '16' # Specify the version of Node.js
           
-      - name: show Java version
-        run: "node -version"
-          
-      - name: Show directory
-        run: 'pwd'
-        
-      - name: List files
-        run: 'ls -al'
-          
       - name: Install dependencies
         run: npm install #  Install dependencies
         
-    #  - name: Build the app # Create a project build.
+      - name: Build the app # Create a project build.
         #run: 'npm run build'
 
-     # - name: Run tests # Run unit tests.
+      - name: Run tests # Run unit tests.
         #run: 'npm test'
