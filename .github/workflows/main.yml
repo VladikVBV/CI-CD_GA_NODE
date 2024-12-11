@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install #  Install dependencies
         
-      - name: Build the app # Create a project build.
+    #  - name: Build the app # Create a project build.
         #run: 'npm run build'
 
-      - name: Run tests # Run unit tests.
+     # - name: Run tests # Run unit tests.
         #run: 'npm test'
