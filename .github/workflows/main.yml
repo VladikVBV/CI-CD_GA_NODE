@@ -23,7 +23,7 @@ jobs:
           node-version: '16' 
       - name: Install dependencies
         run: npm install
-    # - name: Build the project
-    #   run: echo "Build the project"
+      - name: Build the project
+        run: echo "Build the project"
       - name: Run tests
         run: echo "run tests"
